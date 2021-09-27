@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration Success</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body style="background-color:powderblue;">
+    <div class="container text-center mt-5"  style="width: 500px;">
+       <!--  <h3>You have signed up successfully!</h3>
+        <h4><a th:href="@{/logindoctor}">Click here to Login</a></h4>
+        <div class="container">  -->
+     <form  th:action="@{/abcd1}" th:object="${admin}" method="post">
+        <h2 >Please Login Here</h2>
+        <p>
+<!--           <label for="username">Firstname</label> -->
+          <input type="text" id="username" name="email" class="form-control" placeholder="Username" >
+        </p>
+        <p>
+<!--           <label for="password" >Password</label> -->
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+        </p>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+</div>
+   
+     
+</body>
+</html>

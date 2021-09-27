@@ -1,0 +1,26 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Please sign in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  </head>
+  <body>
+     <div class="container">
+      <form action="#" th:action="@{/process_doctor}" th:object="${doctor}" method="post">
+        <h2 >Please sign in</h2>
+        <p>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="email" class="form-control" placeholder="Username" >
+        </p>
+        <p>
+          <label for="password" >Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+        </p>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ayurveda</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script src='bootstrap-5.1.0-dist/js/bootstrap.js.map'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <style>
+    #abc {
+  border: 2px solid blue;
+  /* border-radius: 25px; */
+  }
+    
+    </style>
+</head>
+<body style="background-color:powderblue;">
+
+	<!-- NavBAr -->
+	<style>
+.topnav {
+  background-color:navy;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: black;
+  color: blue;
+}
+
+
+
+.footer-dark {
+  padding:50px 0;
+  color:black;
+  background-color:powderblue;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+ 
+}
+
+.footer-dark ul a:hover {
+  opacity:0.9;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.9;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:black;
+  opacity:0.9;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.9;
+  font-size:13px;
+  margin-bottom:0;
+}
+.style1{
+color : white;
+}
+
+
+
+</style>
+<hr>
+<H1 align="center">VIRTUAL AYURVEDA HOME</H1>
+<hr>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:navy;" >
+ <div id="col" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+           
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-bs-toggle="dropdown">Login</a>
+                <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item " th:href="@{/login}">Patient</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" th:href="@{/logindoctor}">Doctor</a></li>
+                 
+                </ul>
+            </li>
+            
+             <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-bs-toggle="dropdown">Register</a>
+                <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" th:href="@{/register}">Patient</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" th:href="@{/registerdoctor}">Doctor</a></li>
+             
+                </ul>
+            </li>
+             <li class="nav-item">
+                <a th:href="@{/telecenter}" class="nav-link ">OtherMedicine</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/telecentermed}" class="nav-link">TeleMedicine</a>
+            </li>
+          
+        </ul>
+      <!--   <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="type here to search">
+                <button type="button"class="btn btn-success"><i class="bi bi-search"></i></button>
+            </div>
+        </form> -->
+  
+
+
+
+<!-- 
+<div class="topnav">
+<a th:href="@{/login}">Patient Login</a> 
+<a th:href="@{/logindoctor}">Doctor Login</a> 
+<a th:href="@{/telecenter}">OtherMedicine</a> 
+<a th:href="@{/telecentermed}">TeleMedicine</a>
+<a th:href="@{/register}">Patient Signup </a>
+<a th:href="@{/registerdoctor}">Doctor Signup </a> -->
+
+
+<div align="right"><span class="style1">
+                    <script language="JavaScript">
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write(""+'&nbsp;'+dayarray[day]+", "+montharray[month]+" "+daym+", "+year)
+                    </script>
+                    </span></div>
+
+
+</div>
+<h3 align = "center">  <div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"></div> </h3>
+
+</div>
+
+  </nav>	
+
+	<!-- Navbar -->
+<!--Carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img th:src="@{${'/img/1.jpg'}}" class="d-block w-100" style="height: 300px;"  alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{${'/img/2.jpg'}}" class="d-block w-100" style="height: 300px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{${'/img/3.jpg'}}" class="d-block w-100" style="height: 300px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Carousel end-->
+    <!-- Marquee start  -->
+    
+    <marquee width="100%" direction="left" height="30px">
+	<h4 style="color:red"><i>"My mission is to bring vibrant health, unlimited energy and peace of
+mind into every heart, every home through the ancient healing secrets" </i></h4>
+	
+	</marquee>
+    
+    
+    <!-- Marquee end -->
+    
+    <!-- multicards  start -->
+   <div class="row row-cols-1 row-cols-md-3 g-4 my-1">
+  <div class="col">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/Asthama-card.jpg'}}" class="card-img-top w-100" style="height: 200px"  >
+      <div class="card-body">
+        <h5 class="card-title">Asthma</h5>
+        <p class="card-text">1. Ayurveda refers to bronchial asthma as Tamaka Swasa and it is well explained in Charaka Samhita.<br>
+         2. It contributes several modalities of the treatment for Swasa roga(asthma).<br>
+         3. Among all modalities of treatment, polyherbal combinations are said to be well-accepted, safe and effective in asthma.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/arthritis-ayurveda-card.jpg'}}" class="card-img-top w-100" style="height: 200px" >
+      <div class="card-body">
+        <h5 class="card-title">Arthritis</h5>
+        <p class="card-text">1. It was concluded that RA can be cured completely or manage well with Ayurveda medicines<br> 
+        2. Panchakarma without any side effects,drugs and disease can be controlled by ayurvedic medicine.<br>
+        3. But it can be a complementary treatment are safe and effective in Arthritis.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/Ayurvedic-medicines-for-kidney-stones.png'}}" class="card-img-top w-100" style="height: 200px">
+      <div class="card-body">
+        <h5 class="card-title">Kidney Stone</h5>
+        <p class="card-text">1. There are some special preparations with moong, coconut flower, ash gourd juice.<br> 
+        2. Banana tree trunk -these are classical ayurvedic preparations that can easily cure kidney stones, says Prakruthi.<br>
+        3.  "Homeopathic treatment is extremely effective in flushing out kidney stones</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 my-1">
+  <div class="col">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/ayurveda-hair-loss-card.jpg'}}" class="card-img-top w-100" style="height: 200px"  >
+      <div class="card-body">
+        <h5 class="card-title">Hair Loss</h5>
+        <p class="card-text">1. According to Ayurveda, hair fall occurs due to an imbalance of Pitta energy in the body.<br>
+        2. Regular hair oiling and head massage with a suitable Ayurvedic oil is one of the most effective hair loss remedies.<br> 
+        3. We recommend adding regular oiling with hair growth oils to your hair care regime.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/thyroid-treatment-card.png'}}" class="card-img-top w-100" style="height: 200px" >
+      <div class="card-body">
+        <h5 class="card-title">Thyroid</h5>
+        <p class="card-text">1. Ayurvedic medicine can be used alongside standard treatments to help you manage your thyroid disorder.<br>
+        2. Ayurvedic medicine isn't meant to be a replacement for standard treatments.<br>
+        3. It can be a complementary treatment combinations are said to be effective in Thyroid. </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/ACID_REFLUX-card.jpg'}}" class="card-img-top w-100" style="height: 200px">
+      <div class="card-body">
+        <h5 class="card-title">Acidity</h5>
+        <p class="card-text">1. Acidity can be cured by Ayurveda as it aims at balancing the Pitta dosha that is responsible for it.<br> 
+        2. Following Ayurveda prescribed diet that will suit your Prakriti and taking herbs will slowly treat the root cause of Acidity.<br>
+        3. Ayurveda helps to slow down acidity by curd and with various doshas.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+    <!-- footer -->
+    
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Sponser's By</h3>
+                        <ul>
+                            <li><a href="#">Himalaya</a></li>
+                            <li><a href="#">Patanjali</a></li>
+                            <li><a href="#">Dabur</a></li>
+                            <li><a href="#">Baidyanath</a></li>
+                            <li><a href="#">Dantkanti</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Connect With</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Contact Us</h3>
+                        <p>Near Vidharbh Hosing Society, Old Krida Sankul Road, Plot No. 67 Solanke lay out, Buldana. <br> Mobile Number : +91-7507754974 </p> 
+                    </div>
+                    <div class="col item social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-twitter"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+                </div>
+                <p class="copyright">Virtual Ayurveda Home © 2021</p>
+            </div>
+        </footer>
+    </div>
+    
+    
+        
+   <!-- Footer -->
+    </body>
+<footer class="container text-left">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2020-2021 Ayurveda, All Rights Reserved </p>
+</footer>
+</html>

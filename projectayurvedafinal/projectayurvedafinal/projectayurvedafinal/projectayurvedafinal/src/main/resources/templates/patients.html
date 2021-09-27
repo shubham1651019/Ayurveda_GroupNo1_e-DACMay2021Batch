@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User Welcome</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:powderblue;">
+<div class="container text-center">
+    <div>
+        <form th:action="@{/logout}" method="post">
+            <p>
+                Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+            </p>
+            <input type="submit" value="Sign Out" />
+        </form>
+    </div>
+    <div>
+        <h1>Ayurveda</h1>
+    </div>
+	
+<hr>
+<a th:href="@{patients/myAppointments}">Specialist Doctors |</a>
+<a th:href="@{/viewPrescription}"> | View Prescriptions |</a>
+<a th:href="@{patients/cancelAppointment}">| Cancel Appointment |</a>
+<hr><hr>
+Schedule your visit by booking an appointment: <a th:href="@{/add}">Book Appointment</a>
+<br>
+<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"></div>
+	
+    </div>
+
+</body>
+</html>

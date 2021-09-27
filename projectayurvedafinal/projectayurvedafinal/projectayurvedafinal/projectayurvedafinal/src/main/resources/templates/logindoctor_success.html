@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html xmlns:th="http://www.thymeleaf.org"> -->
+<!-- <head> -->
+<!--     <meta charset="ISO-8859-1"> -->
+<!--     <title>Registration Success</title> -->
+<!--     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" /> -->
+<!-- </head> -->
+<!-- <body style="background-color:powderblue;"> -->
+<!--     <div class="container text-center"> -->
+<!--         <h3>You have signed up successfully as Doctor!</h3> -->
+<!--       <h4><a th:href="@{/login}">Click here to Login</a></h4>  -->
+      
+<!--     </div> -->
+     
+<!-- </body> -->
+<!-- </html> -->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Doctor Profile</title>
+</head>
+<body style="background-color:powderblue;">
+<hr>
+<H1 align="center">Ayurveda</H1>
+<hr>
+<H3 align="center">Hello! DR:</H3><span th:text="${doctorName}"></span> 
+<form action=# th:action="@{/logout}" >
+<input type="submit" value="logout">
+</form>
+
+<a th:href="@{jsoncalendar}">Schedule</a> 
+<a th:href="@{doctorAppointments}">Appointments</a> 
+</body>
+</html>

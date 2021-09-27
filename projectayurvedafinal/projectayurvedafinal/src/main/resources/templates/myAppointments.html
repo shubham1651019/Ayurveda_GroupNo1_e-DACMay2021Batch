@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script src='bootstrap-5.1.0-dist/js/bootstrap.js.map'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<title> Specialist Doctors</title>
+<style>
+table,th,td{
+border: 1px solid black;
+padding: 3px;
+text-align: center;
+}
+table{
+border-spacing: 5px;
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+<hr> <hr>
+	<H1 align="center">AYURVEDA</H1>
+	<hr>
+	<a th:href="@{/list_users}">Homepage</a>
+	 <hr>
+	 
+	 <!--  <div class="row row-cols-1 row-cols-md-3 g-4 my-1">
+  <div class="col">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/tausif.jpeg'}}" class="card-img-top w-100" style="height: 350px"  >
+      <div class="card-body">
+        <h5 class="card-title">Dr.Tausif Khan</h5>
+        <p class="card-text">
+        <strong>Email-id:tausifkhan6797@gmail.com<br>
+        Phone Number:+91-7507754975<br>
+        Qualification:Phd,BAMS<br>
+        Specialization:Dermatologist, chitrakadi vati, indigestion relief<br>
+        Available-time:Monday-Saturday(8am-6pm)
+        
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/shubham.jpeg'}}" class="card-img-top w-100" style="height: 350px" >
+      <div class="card-body">
+        <h5 class="card-title">Dr.Shubham Gadhave</h5>
+        <p class="card-text">
+         <strong>Email-id:shubham15@yahoo.com<br>
+        Phone Number:+91-7620995883<br>
+        Qualification:MS,BAMS<br>
+        Specialization:Rasashastra and Bhaishajyakalpana, M.P.B.M.<br>
+        Available-time:Monday-Saturday(8am-8pm)
+        
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/juhi4.jpeg'}}" class="card-img-top w-100" style="height: 350px">
+      <div class="card-body">
+        <h5 class="card-title">Dr.Juhi Ahire</h5>
+        <p class="card-text">
+        <strong>Email-id:juhiahire37@gmail.com<br>
+        Phone Number:+91-7083627505<br>
+        Qualification:BAMS<br>
+        Specialization:Acne, gain weight, pcod treatment, ayurveda treatment, menstrual bleeding<br>
+        Available-time:Friday-Sunday(6am-6pm)
+        </strong>    
+      </div>
+    </div>
+  </div>
+  
+   <div class="col" style="height: 200px">
+    <div class="card" id="abc">
+      <img th:src="@{${'/img/pooja.jpeg'}}" class="card-img-top w-100" style="height: 350px">
+      <div class="card-body">
+        <h5 class="card-title">Dr.Pooja Belsare</h5>
+        <p class="card-text">
+        <strong>Email-id:poojabelsare@gmail.com<br>
+        Phone Number:+91-8237456515<br>
+        Qualification:BAMS<br>
+        Specialization:Ayurveda treatment,ashwagandha, yoga<br>
+        Available-time:Friday-Sunday(6am-6pm)
+        </strong>    
+      </div>
+    </div>
+  </div> -->
+  
+	 
+	 
+	 
+	 
+	<!-- <br>
+	<br>
+       
+        <table style="width:100%">
+        <caption>Your appointments</caption>
+        <tr>
+            <th>AppointmentID</th>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Appointment Date</th>
+            <th>Confirmation</th>
+        </tr>
+        <tr th:each="appointment : ${listAppointments}">
+            <td th:text="${appointment.appointment_id}"></td>
+          	<td th:text="${appointment.patientName}"></td>
+          	<td th:text="${appointment.doctorName}"></td>
+          	<td th:text="${appointment.date}"></td>
+          	<td th:text="${appointment.confirmed}"></td>
+        </tr>
+    </table> -->
+</body>
+</html>
